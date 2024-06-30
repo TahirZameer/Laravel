@@ -21,13 +21,12 @@
                                     </div>
                                 </div>
                                 <form action="{{ route('account.processRegister') }}" method="post">
-                                <!-- <form action="{{ url('account/register') }}" method="post"> -->
                                     @csrf
                                     <div class="row gy-3 overflow-hidden">
                                     <div class="col-12">
                                             <div class="form-floating mb-3">
-                                                <input type="string" class="form-control @error('name') is-invalid @enderror" name="name" id="name" placeholder="Tahir Zameer" >
-                                                <label for="name" class="form-label">Email</label>
+                                                <input type="string" value="{{ old('name') }}" class="form-control @error('name') is-invalid @enderror" name="name" id="name" placeholder="Name" >
+                                                <label for="name" class="form-label">Name</label>
                                                 @error('name')
                                                     <p class="invalid-feedback">{{ $message }}</p>
                                                 @enderror
@@ -35,7 +34,7 @@
                                         </div>
                                         <div class="col-12">
                                             <div class="form-floating mb-3">
-                                                <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" id="email" placeholder="name@example.com" >
+                                                <input type="email" value="{{ old('email') }}" class="form-control @error('email') is-invalid @enderror" name="email" id="email" placeholder="name@example.com" >
                                                 <label for="email" class="form-label">Email</label>
                                                 @error('email')
                                                     <p class="invalid-feedback">{{ $message }}</p>

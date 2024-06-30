@@ -22,11 +22,11 @@
                                             <p class="alert alert-danger">{{ Session::get('error') }}</p>
                                         @endif
                                         <div class="mb-5">
-                                            <h4 class="text-center">Login Here</h4>
+                                            <h4 class="text-center">Admin Login</h4>
                                         </div>
                                     </div>
                                 </div>
-                                <form action="{{ route('account.authenticate') }}" method="post">
+                                <form action="{{ route('admin.authenticate') }}" method="post">
                                     @csrf
                                     <div class="row gy-3 overflow-hidden">
                                         <div class="col-12">
@@ -54,14 +54,14 @@
                                         </div>
                                     </div>
                                 </form>
-                                <div class="row">
+                                <!-- <div class="row">
                                     <div class="col-12">
                                         <hr class="mt-5 mb-4 border-secondary-subtle">
                                         <div class="d-flex gap-2 gap-md-4 flex-column flex-md-row justify-content-center">
                                             <a href="{{ route('account.register') }}" class="link-secondary text-decoration-none">Create new account</a>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
